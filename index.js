@@ -27,6 +27,8 @@ var request = new GithubRequest(github.token, args.owner, args.repo, {
 var manager = new PivotalManager(pivotal.token, args.pivotalid);
 
 request.on('issues', function(issues) {
+  console.log('Found ' + issues.length + ' issues.');
+
   async.eachSeries(issues, function(issue, done) {
     manager.post(issue, function(status, body) {
       if (status == 200) {
