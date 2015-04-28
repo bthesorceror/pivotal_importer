@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "hyperquest": "^1.0.1"
+    "hyperquest": "^1.0.1",
+    "minimist": "^1.1.1"
   }
 }
